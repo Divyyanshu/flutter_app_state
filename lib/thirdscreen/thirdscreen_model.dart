@@ -1,33 +1,28 @@
-import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/components/dropdown_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
-import 'home_page_widget.dart' show HomePageWidget;
-import 'package:flutter/foundation.dart';
+import 'thirdscreen_widget.dart' show ThirdscreenWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
-  ///  Local state fields for this page.
-
-  String dropdownValue = '';
-
+class ThirdscreenModel extends FlutterFlowModel<ThirdscreenWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  DateTime? datePicked;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
+  // Model for dropdown component.
+  late DropdownModel dropdownModel;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    dropdownModel = createModel(context, () => DropdownModel());
+  }
 
   void dispose() {
     unfocusNode.dispose();
+    dropdownModel.dispose();
   }
 
   /// Action blocks are added here.

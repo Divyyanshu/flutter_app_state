@@ -1,23 +1,19 @@
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'home_page_widget.dart' show HomePageWidget;
-import 'package:flutter/foundation.dart';
+import 'dropdown_widget.dart' show DropdownWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
-  ///  Local state fields for this page.
+class DropdownModel extends FlutterFlowModel<DropdownWidget> {
+  ///  Local state fields for this component.
 
   String dropdownValue = '';
 
-  ///  State fields for stateful widgets in this page.
+  ///  State fields for stateful widgets in this component.
 
-  final unfocusNode = FocusNode();
-  DateTime? datePicked;
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
@@ -26,9 +22,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   void initState(BuildContext context) {}
 
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 
   /// Action blocks are added here.
 

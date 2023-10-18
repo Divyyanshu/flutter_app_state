@@ -52,6 +52,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'anotherpage',
           path: '/anotherpage',
           builder: (context, params) => AnotherpageWidget(),
+        ),
+        FFRoute(
+          name: 'thirdscreen',
+          path: '/thirdscreen',
+          builder: (context, params) => ThirdscreenWidget(
+            dropdowndata: params.getParam('dropdowndata', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
